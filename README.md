@@ -11,6 +11,6 @@ This is a Python script that allows you to download all the videos from a YouTub
 3. Run the script using the following command:
 
 ```bash
-python ytpld
+python app.py
 ```
 4. Enter the YouTube playlist link when prompted.
