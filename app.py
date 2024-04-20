@@ -4,6 +4,7 @@ from pytube.cli import on_progress
 
 
 def validate_folder_name(name):
+    """This function validates folder names by substituting invalid characters with dashes ('-')"""
     invalid_characters = r'\/:*?"<>|'
     for character in invalid_characters:
         name = name.replace(character, ' - ')
@@ -24,6 +25,7 @@ def get_download_path():
 
 
 def cls():
+    """"This function clears the terminal (tested in Linux and Windows).""""
     os.system('cls' if os.name=='nt' else 'clear')
 
 
