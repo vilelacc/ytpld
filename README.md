@@ -1,5 +1,5 @@
 # YouTube playlist download script
-This Python script allows you to download all the songs in a YouTube playlist at once. It uses the ``pytube`` library to download videos.
+This Python script allows you to download all the videos in a YouTube playlist at once. It uses the ``pytube`` library to download videos.
 
 > [!WARNING]
 > This script is provided as-is, and the user assumes all responsibility for its usage. Make sure to comply with YouTube terms of service and respect the rights and privacy of others while using this script.
