@@ -25,7 +25,7 @@ def get_download_path():
 
 
 def cls():
-    """"This function clears the terminal (tested in Linux and Windows).""""
+    """This function clears the terminal (tested in Linux and Windows)."""
     os.system('cls' if os.name=='nt' else 'clear')
 
 
