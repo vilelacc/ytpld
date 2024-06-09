@@ -31,4 +31,3 @@ python app.py
 5. Download in progress: The script will begin downloading the playlist videos to your operating system's default downloads directory.
 6. Track progress: You'll see a message indicating which video is currently downloading.
 7. Check the download directory: After the download is complete, check the default download directory for your operating system. The videos will be saved in a folder with the name of the playlist.
-8. 
