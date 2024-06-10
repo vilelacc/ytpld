@@ -1,33 +1,7 @@
 import os
 from pytube import YouTube, Playlist
 from pytube.cli import on_progress
-
-
-def validate_folder_name(name):
-    """This function validates folder names by substituting invalid characters with dashes ('-')"""
-    invalid_characters = r'\/:*?"<>|'
-    for character in invalid_characters:
-        name = name.replace(character, ' - ')
-    return name
-
-
-def get_download_path():
-    """Returns the default downloads path for linux or windows"""
-    if os.name == 'nt':
-        import winreg
-        sub_key = r'SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders'
-        downloads_guid = '{374DE290-123F-4565-9164-39C4925E467B}'
-        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, sub_key) as key:
-            location = winreg.QueryValueEx(key, downloads_guid)[0]
-        return location
-    else:
-        return os.path.join(os.path.expanduser('~'), 'downloads')
-
-
-def cls():
-    """This function clears the terminal (tested in Linux and Windows)."""
-    os.system('cls' if os.name=='nt' else 'clear')
-
+from utils.functions import get_download_path, validate_folder_name
 
 full_path = get_download_path() #os.getcwd()
 playlist_url = input("Enter the playlist link: ")
@@ -40,10 +14,11 @@ if not os.path.isdir(path):
 for url in playlist:
     try:
         video = YouTube(url, on_progress_callback=on_progress)
+        file_name = f"{video.title}.mp4" 
+        
         print(f"Downloading {video.title}")
-
         # check if the file already exists before downloading again
-        video_path = os.path.join(path, f"{video.title}.mp4")
+        video_path = os.path.join(path, file_name)
 
         if os.path.isfile(video_path):
             print("Video already exists. Skipping...")
@@ -51,7 +26,8 @@ for url in playlist:
 
         stream = video.streams.get_highest_resolution()
         stream.download(output_path=path)
-        cls()
+        
+        os.system("cls" if os.name == "nt" else "clear")
 
     except Exception as e:
         print(f"Am error occurred while downloading the video: {e}")
