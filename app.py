@@ -15,9 +15,9 @@ def download_playlist(playlist_url):
     for url in playlist:
         try:
             video = YouTube(url, on_progress_callback=on_progress)
+            stream = video.streams.get_highest_resolution()
             try:
                 print(f"Downloading {video.title}")
-                stream = video.streams.get_highest_resolution()
                 stream.download(output_path=path, skip_existing=True, max_retries=2)
             except MaxRetriesExceeded:
                 print(f"Maximum number of retries exceeded for video: {video.title}")
