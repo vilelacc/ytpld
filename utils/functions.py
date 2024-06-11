@@ -1,7 +1,7 @@
 import os
 
 
-def validate_folder_name(name):
+def validate_folder_name(name: str) -> str:
     """This function validates folder names by substituting invalid characters with dashes ('-')"""
     invalid_characters = r'\/:*?"<>|'
     for character in invalid_characters:
@@ -9,7 +9,7 @@ def validate_folder_name(name):
     return name
 
 
-def get_download_path():
+def get_download_path() -> str:
     """Returns the default downloads path for linux or windows"""
     if os.name == 'nt':
         import winreg
