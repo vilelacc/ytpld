@@ -4,7 +4,7 @@ from pytube.exceptions import MaxRetriesExceeded
 from pytube.cli import on_progress
 from utils.functions import get_download_path, validate_folder_name
 
-def download_playlist(playlist_url):
+def download_playlist(playlist_url: str) -> None:
     full_path = get_download_path()  # os.getcwd()
     playlist = Playlist(playlist_url)
     path = os.path.join(full_path, validate_folder_name(playlist.title))
