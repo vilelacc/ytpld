@@ -24,7 +24,7 @@ pip install pytubefix
 1. Clone the repository: Clone the repository where the script is hosted to your local environment using the git clone command. For example:
 
 ```bash
-git clone https://github.com/vilelajs/YouTubePlaylistDownloader.git
+git clone https://github.com/vilelajs/youtube-playlist-downloader.git
 ```
 
 2. Navigate to directory: Use the terminal or command prompt to navigate to the project directory where the script is located.
