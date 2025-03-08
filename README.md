@@ -1,4 +1,11 @@
 # YouTube playlist download script
+![License](https://img.shields.io/github/license/vilelajs/youtube-playlist-downloader)
+![Last Commit](https://img.shields.io/github/last-commit/vilelajs/youtube-playlist-downloader)
+![Issues](https://img.shields.io/github/issues/vilelajs/youtube-playlist-downloader)
+![Pull Requests](https://img.shields.io/github/issues-pr/vilelajs/youtube-playlist-downloader)
+![Forks](https://img.shields.io/github/forks/vilelajs/youtube-playlist-downloader)
+![Stars](https://img.shields.io/github/stars/vilelajs/youtube-playlist-downloader)
+
 This Python script allows you to download all the videos in a YouTube playlist at once. It uses the ``pytubefix`` library to download videos.
 
 > [!WARNING]
