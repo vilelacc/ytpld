@@ -1,5 +1,4 @@
 # YouTube playlist download script
-![License](https://img.shields.io/github/license/vilelajs/youtube-playlist-downloader)
 ![Last Commit](https://img.shields.io/github/last-commit/vilelajs/youtube-playlist-downloader)
 ![Issues](https://img.shields.io/github/issues/vilelajs/youtube-playlist-downloader)
 ![Pull Requests](https://img.shields.io/github/issues-pr/vilelajs/youtube-playlist-downloader)
